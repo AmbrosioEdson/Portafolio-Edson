@@ -9,11 +9,12 @@ import { ProyectsUI } from './services/provide-sections.service';
 export class AppComponent {
   title = 'porfolio1';
   proyectToPopUp!: ProyectsUI | null
-  activate:boolean = true
+  activate: boolean = false
 
   activatePopup(data2: ProyectsUI) {
     this.proyectToPopUp = data2
     this.activate = true
+    console.log(this.activate)
   }
 
   desactivatePopUp(event: boolean) {
