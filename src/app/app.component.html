@@ -3,10 +3,10 @@
     <app-popup [proeyctToActivate]="proyectToPopUp" (desacPopUP)="desactivatePopUp($event)"></app-popup>
   </div>
   <div class="p-20 h-screen flex flex-col lg:ml-[120px] lg:flex-row">
-    <section class="info-relative">
+    <section class="info-relative" [ngClass]="{'blur-sm':activate}" >
       <app-info-main></app-info-main>
     </section>
-    <section class="flex-1" #about>
+    <section class="flex-1" [ngClass]="{'blur-sm':activate}" #about>
       <app-main (activatePopUp)="activatePopup($event)"></app-main>
     </section>
   </div>
